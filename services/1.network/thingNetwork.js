@@ -5,7 +5,7 @@ const response = require("../../network/response");
 const config = require("../../config");
 
 // Get all
-//?Filter method exist on store layer, you can add on the business layer
+//?Filter method exist on store layer, you can send a filter via body
 router.get("/", (req, res) => {
   controller
     .GetThing(req.body)

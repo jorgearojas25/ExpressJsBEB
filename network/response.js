@@ -7,12 +7,12 @@ class result {
 }
 
 exports.success = (req, res, response, status) => {
-  let result = new result(true, response, []);
-  res.status(status || 200).send(result);
+  let resp = new result(true, response, []);
+  res.status(status || 200).send(resp);
 };
 
 exports.error = (req, res, exception, status, log) => {
   console.log(log);
-  let result = new result(false, [], exception);
-  res.status(status || 500).send(result);
+  let err = new result(false, [], exception);
+  res.status(status || 500).send(err);
 };
